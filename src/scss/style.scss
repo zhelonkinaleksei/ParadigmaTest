@@ -2,8 +2,8 @@
 
 html{
     font-size: calc(100vw / 1640 * 10);
-    @media (max-width:1440px){
-        font-size: calc(100vw / 992 * 10);
+    @media (max-width:992px){
+        font-size: calc(100vw / 768 * 10);
     }
 }
 
@@ -63,7 +63,7 @@ html{
     }
 }
 .header__calc {
-    width: 19.3rem;
+    max-width: 19.3rem;
     height: 3.7rem;
     font-weight: 700;
     line-height: 1.72;
@@ -95,7 +95,7 @@ html{
     margin-right: 1.8rem;
 }
 .header__social-items {
-    column-gap: 5.97px;
+    column-gap: 0.597rem;
     display: flex;
     width: 11.703rem;
     height: 3.5rem;
@@ -104,20 +104,21 @@ html{
     width: 3.5rem;
     height: 3.5rem;
     img{
-        
+        width: 100%;
     }
+
 }
 .header__call {
     display: flex;
     flex-direction: column;
-    width: 20.1rem;
+    max-width: 20.1rem;
     justify-content: space-between;
     align-items: center;
 }
 .header__call-title {
     font-size: 1.2rem;
     line-height: 0.83;
-    width: 16.5rem;
+
     margin-bottom: 0.6rem;
 }
 .header__call-phone {
@@ -142,3 +143,89 @@ html{
     background-repeat: no-repeat;
     background-position: right;
 } 
+
+@media(max-width:992px){
+    .header {
+        font-size: 0.9rem;
+        row-gap: 1rem;
+        flex-wrap: wrap;
+        padding: 1.8rem 0;
+    }
+    .header__logo {
+        width: 11rem;
+        height: 2rem;
+    }
+    .header__remont {
+        height: 3rem;
+        width: 14rem;
+    }
+    .header__adress {
+        width: 18.2rem;
+        height: 3rem;  
+    }
+    .header__card {
+        font-weight: 700;
+        width: 13.2rem;
+        height: 1.9rem;
+        padding-left: 2.0rem;
+        span{
+        
+            width: 9.5rem;
+        }
+    }
+    .header__calc {
+        width: 18.3rem;
+        height: 3.7rem;
+        padding-left: 4.6rem;
+        span{
+            border-bottom:  0.2rem dotted #FD2016 ;
+            &:nth-child(1){
+                width: 11.5rem;    
+            }
+            &:nth-child(2){
+                width: 9rem;
+    
+            }
+        }
+    
+    }
+    .header__social {
+        display: flex;
+        width: 24.103rem;
+        height: 3.0rem;
+        align-items: center;
+    }
+    .header__social-title {
+        letter-spacing: 0.03em;
+        line-height: 1.63; 
+        width: 10.6rem;
+        margin-right: 1.0rem;
+    }
+    .header__social-items {
+        column-gap: 5.97px;
+        width: 11.703rem;
+        height: 3.0rem;
+    }
+    .header__social-item {
+        width: 3.0rem;
+        height: 3.0rem;
+        img{
+            
+        }
+    }
+    .header__call {
+        width: 20.1rem;
+    }
+    .header__call-title {
+        font-size: 1.0rem;
+    }
+    .header__call-phone {
+        font-size: 1.6rem;
+        width: 16.0rem;
+    }
+    .header__call-order {
+        font-size: 1.0rem;
+        width: 9.9rem;
+ 
+    } 
+}
