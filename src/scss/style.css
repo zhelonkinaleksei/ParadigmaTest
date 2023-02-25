@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Manrope";
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+a {
+  color: #000000;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+html {
+  font-size: 0.6097560976vw;
+}
+@media (max-width: 1440px) {
+  html {
+    font-size: 1.0080645161vw;
+  }
+}
+
+.container {
+  max-width: 164rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  font-size: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.2rem 0;
+}
+
+.header__logo {
+  width: 21.3rem;
+  height: 5rem;
+  background-image: url("/src/assets/img/header/logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header__remont {
+  width: 14.2rem;
+  height: 4rem;
+  letter-spacing: 0.02em;
+  line-height: 1.63;
+}
+
+.header__adress {
+  width: 20.2rem;
+  height: 3.5rem;
+  padding-left: 4.5rem;
+  line-height: 1.63;
+  background-image: url("/src/assets/img/header/card.svg");
+  background-size: 3.5rem 3.5rem;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.header__card {
+  font-weight: 700;
+  width: 14.2rem;
+  height: 1.9rem;
+  padding-left: 2.2rem;
+  letter-spacing: 0.05em;
+  background-image: url("/src/assets/img/header/geo.svg");
+  background-size: 1.2rem 1.5rem;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.header__card span {
+  display: block;
+  border-bottom: 0.2rem dotted #FD2016;
+  width: 11.9rem;
+}
+
+.header__calc {
+  width: 19.3rem;
+  height: 3.7rem;
+  font-weight: 700;
+  line-height: 1.72;
+  letter-spacing: 0.05em;
+  padding-left: 4.6rem;
+  background-image: url("/src/assets/img/header/calc.svg");
+  background-size: 3.503rem 3.5rem;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.header__calc span {
+  border-bottom: 0.2rem dotted #FD2016;
+  display: block;
+}
+.header__calc span:nth-child(2) {
+  width: 10.7rem;
+}
+
+.header__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24.103rem;
+  height: 3.6rem;
+}
+
+.header__social-title {
+  letter-spacing: 0.03em;
+  line-height: 1.63;
+  width: 10.6rem;
+  margin-right: 1.8rem;
+}
+
+.header__social-items {
+  -webkit-column-gap: 5.97px;
+     -moz-column-gap: 5.97px;
+          column-gap: 5.97px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 11.703rem;
+  height: 3.5rem;
+}
+
+.header__social-item {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.header__call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20.1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__call-title {
+  font-size: 1.2rem;
+  line-height: 0.83;
+  width: 16.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.header__call-phone {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 0.83;
+  width: 19rem;
+  margin-bottom: 0.6rem;
+  background-image: url("/src/assets/img/header/arrow.svg");
+  background-size: 0.9rem 0.5rem;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.header__call-order {
+  font-size: 1.2rem;
+  width: 11.9rem;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  border-bottom: 0.2rem dotted #FD2016;
+  background-image: url("/src/assets/img/header/phone.svg");
+  background-size: 0.6rem 0.6rem;
+  background-repeat: no-repeat;
+  background-position: right;
+}
