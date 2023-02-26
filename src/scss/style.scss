@@ -3,11 +3,15 @@
 html{
     font-size: calc(100vw / 1640 * 10);
     @media (max-width:992px){
-        font-size: calc(100vw / 768 * 10);
+        font-size: 62.5%;
     }
 }
-
-
+body{
+    font-size: 1.6rem;
+}
+._lock{
+    overflow: hidden;
+}
 
 .container {
     max-width: 164rem;
@@ -15,11 +19,19 @@ html{
     padding: 0 1.5rem;     
 }
 .header {
+    position: relative;
     font-size: 1.1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.2rem 0;
+    padding: 2.2rem 1.5rem;
+    margin: 0 -1.5rem;
+    z-index: 2;
+}
+@media(min-width:769px){
+    .header {
+        border-bottom: 0.1rem solid #F5F5F5;
+    } 
 }
 .header__logo {
     width: 21.3rem;
@@ -46,7 +58,10 @@ html{
     background-position: left top;
 
 }
+
 .header__card {
+    position: relative;
+    cursor: pointer;
     font-weight: 700;
     width: 14.2rem;
     height: 1.9rem;
@@ -58,11 +73,45 @@ html{
     background-position: left;
     span{
         display: block;
-        border-bottom:  0.2rem dotted #FD2016 ;
+        position: relative;
+        &::after{
+            content: "";
+            width: 100%;
+            height: 0.2rem;
+            border-bottom: 0.2rem dotted #d91967;
+            transition: all 0.3s ease 0s;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+    
+        }
+        &:hover{
+            &::after{
+                width: 70%;
+            }
+                
+            }
+        display: block;
         width: 11.9rem;
     }
 }
+.card__block{
+    display: none;
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    border: 1px solid #cacaca;
+    top: 2rem;
+    left: -14rem;
+    transition: all 0.3s ease 0s;
+    
+}
+
+.card__block-active{
+    display: block;
+}
 .header__calc {
+    cursor: pointer;
     max-width: 19.3rem;
     height: 3.7rem;
     font-weight: 700;
@@ -74,8 +123,25 @@ html{
     background-repeat: no-repeat;
     background-position: left;
     span{
-        border-bottom:  0.2rem dotted #FD2016 ;
+        position: relative;
         display: block;
+        &::after{
+            content: "";
+            width: 100%;
+            height: 0.2rem;
+            border-bottom: 0.2rem dotted #d91967;
+            transition: all 0.3s ease 0s;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+    
+        }
+        &:hover{
+            &::after{
+                width: 70%;
+            }
+                
+            }
         &:nth-child(2){
             width: 10.7rem;
             
@@ -109,6 +175,7 @@ html{
 
 }
 .header__call {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     max-width: 20.1rem;
@@ -137,19 +204,131 @@ html{
     width: 11.9rem;
     line-height: 1.75;
     letter-spacing: 0.05em;
-    border-bottom:  0.2rem dotted #FD2016 ;
     background-image:url("/src/assets/img/header/phone.svg");
     background-size: 0.6rem 0.6rem;
     background-repeat: no-repeat;
     background-position: right;
+    position: relative;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 0.2rem;
+        border-bottom: 0.2rem dotted #d91967;
+        transition: all 0.3s ease 0s;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+    }
+    &:hover{
+        &::after{
+            width: 70%;
+        }
+            
+        }
 } 
+.menu__icon{
+    display: none;
+    position: relative;
+    height: 1.361rem;
+    width: 1.475rem;
+    z-index: 2;
+  }
+  
+  .menu__icon span{
+    position: absolute;
+    background-color: #ffffff;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    top: 0.58rem;
+    transition: all 0.3s ease 0s;
+  }
+  .menu__icon::after,
+  .menu__icon::before{
+    content:"";
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 15%;
+    transition: all 0.3s ease 0s;
+  
+  }
+  .menu__icon::after{
+    content:"";
+    height: 13%;
+
+  }
+  
+  .menu__icon::before{
+    top: 0;
+  }
+  .menu__icon::after{
+    bottom: 0;
+  }
+
+  .header__nav {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.33;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #2A2A2A;
+    padding: 2.4rem 0;
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+                a{
+                    display: block;
+                    transition: all 0.3s ease 0s;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+        
+            }
+    }
+}
+
+.header_fixed {
+    transition: all 0.3 ease 0s;
+    position: fixed;
+    left: 1.5rem;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    .header__call{
+        color: #000000;
+
+    }
+    .menu__icon span{
+        background-color: #000000;
+        transition: all 0.3s ease 0s;
+      }
+      .menu__icon::after,
+      .menu__icon::before{
+        content:"";
+        background-color: #000000;
+        transition: all 0.3s ease 0s;
+      
+      }
+  }
+
+
+  
 
 @media(max-width:992px){
     .header {
-        font-size: 0.9rem;
-        row-gap: 1rem;
+        font-size: 1.2rem;
+        row-gap: 3rem;
         flex-wrap: wrap;
         padding: 1.8rem 0;
+        column-gap: 3rem;
+        padding: 2.2rem 1.5rem;
+        margin: 0 -1.5rem;
     }
     .header__logo {
         width: 11rem;
@@ -157,33 +336,33 @@ html{
     }
     .header__remont {
         height: 3rem;
-        width: 14rem;
+        width: 16rem;
     }
     .header__adress {
-        width: 18.2rem;
+        width: 22.2rem;
         height: 3rem;  
     }
     .header__card {
-        font-weight: 700;
-        width: 13.2rem;
+        width: 15.2rem;
         height: 1.9rem;
         padding-left: 2.0rem;
         span{
         
-            width: 9.5rem;
+            width: 13.2rem;
         }
     }
     .header__calc {
-        width: 18.3rem;
+        width: 20.3rem;
         height: 3.7rem;
         padding-left: 4.6rem;
+        background-size: 3.503rem 3.5rem;
         span{
-            border-bottom:  0.2rem dotted #FD2016 ;
+           
             &:nth-child(1){
-                width: 11.5rem;    
+                width: 15.5rem;    
             }
             &:nth-child(2){
-                width: 9rem;
+                width: 13rem;
     
             }
         }
@@ -191,14 +370,14 @@ html{
     }
     .header__social {
         display: flex;
-        width: 24.103rem;
+        width: 25.103rem;
         height: 3.0rem;
         align-items: center;
     }
     .header__social-title {
         letter-spacing: 0.03em;
         line-height: 1.63; 
-        width: 10.6rem;
+        width: 15.6rem;
         margin-right: 1.0rem;
     }
     .header__social-items {
@@ -228,6 +407,197 @@ html{
     .header__call-order {
         font-size: 1.0rem;
         width: 9.9rem;
+ 
+    } 
+    .header__nav {
+        font-size: 0.9rem;
+        padding: 2.4rem 0;
+        ul{
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 1rem;
+            column-gap: 10rem;
+            li {
+                    a{
+                        
+                        display: block;
+                        transition: all 0.3s ease 0s;
+                        &:hover{
+                            text-decoration: underline;
+                            
+                        }
+                    }
+            
+                }
+        }
+    }
+}
+@media(max-width:768px){
+    body{
+        background-image: url('/src/assets/img/main/bg.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+
+    }
+    .header {
+        font-size: 1.6rem;
+        flex-wrap: wrap;
+        padding: 1.5rem 0;
+        padding: 2.2rem 1.5rem;
+        margin: 0 -1.5rem;
+        
+    }
+    .header__logo {
+        width: 13rem;
+        height: 3rem;
+    }
+    .header__remont {
+      display: none;
+    }
+    .header__adress {
+        display: none;
+    }
+    .header__card {
+        display: none;
+    }
+    .header__calc {
+        display: none;
+    }
+    .header__social {
+        display: none;
+    }
+    .header__social-title {
+        letter-spacing: 0.03em;
+        line-height: 1.63; 
+        width: 10.6rem;
+        margin-right: 1.0rem;
+    }
+    .header__social-items {
+        column-gap: 5.97px;
+        width: 11.703rem;
+        height: 2.5rem;
+    }
+    .header__social-item {
+        width: 2.5rem;
+        height: 2.5rem;
+    
+    }
+    .header__call {
+        color: #ffffff;
+        width: 20.1rem;
+        transition: all 0.3s ease 0s;
+    }
+    .header__call-black{
+
+        color: #000000;
+    }
+ 
+    .header__call-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    .header__call-phone {
+        font-size: 1.9rem;
+        width: 18.0rem;
+        line-height: 0.53;
+        background-image: none;
+    }
+    .header__call-order {
+        font-size: 1.3rem;
+        width: 13.0rem;
+ 
+    } 
+    .menu__icon{
+        display:block;
+        }
+        ._active{
+        &::after,
+        &::before{
+            background-color: #000000;
+           }
+        }  
+        
+        ._active::before{
+        transform: rotate(45deg);
+        top: 0.6rem;
+        }
+        ._active::after{
+          transform: rotate(-45deg);
+          bottom: 0.55rem;
+        }
+        ._active span{
+          transform: scale(0);
+        }   
+        .header__nav {
+            position:fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.3s ease 0s;
+            background-color: rgb(255, 255, 255);
+            padding-left: 2.2rem;
+            padding-top: 8.9rem;
+            padding-bottom: 1rem;
+            font-weight: 400;
+            ul{
+                flex-direction: column;
+                align-items: flex-start;
+                li{
+                    &:nth-child(1){
+                        display: none;
+                    }
+                    a{
+                        color: #000000;
+                        font-size: 1.6rem;
+                        padding-bottom: 2.8rem;
+                        letter-spacing: 0.1em;
+                    }
+                }
+            }
+        } 
+        ._actived{
+          left: 0;
+        } 
+    
+}
+
+@media(max-width:540px){
+    .header {
+        font-size: 1.1rem;
+        row-gap: 1.5rem;
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+        padding: 1.5rem 0;
+        padding: 2.2rem 1.5rem;
+        margin: 0 -1.5rem;
+    }
+    .header__logo {
+        width: 9.2rem;
+        height: 2.2rem;
+    }
+    .header__social {
+      display: none;
+    }
+    .header__call {
+        width: 10.5rem;
+    }
+    .header__call-title {
+        font-size: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+    .header__call-phone {
+        font-size: 1.2rem;
+        width: 10.5rem;
+        line-height: 0.83;
+        background-image: none;
+        margin-bottom: 0.5rem;
+    }
+    .header__call-order {
+        font-size: 0.6rem;
+        width: 6.3rem;
  
     } 
 }
