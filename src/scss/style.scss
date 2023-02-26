@@ -218,10 +218,12 @@ html{
     }
     .header__call-title {
         font-size: 1.0rem;
+        margin-bottom: 1rem;
     }
     .header__call-phone {
         font-size: 1.6rem;
         width: 16.0rem;
+        line-height: 0.53;
     }
     .header__call-order {
         font-size: 1.0rem;
