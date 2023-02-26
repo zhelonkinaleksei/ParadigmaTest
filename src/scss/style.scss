@@ -36,7 +36,7 @@ body{
 .header__logo {
     width: 21.3rem;
     height: 5rem;
-    background-image:url("/src/assets/img/header/logo.svg");
+    background-image:url("../assets/img/header/logo.svg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -52,7 +52,7 @@ body{
     height: 3.5rem;
     padding-left: 4.5rem;
     line-height: 1.63; 
-    background-image:url("/src/assets/img/header/card.svg");
+    background-image:url("../assets/img/header/card.svg");
     background-size: 3.5rem 3.5rem;
     background-repeat: no-repeat;
     background-position: left top;
@@ -67,7 +67,7 @@ body{
     height: 1.9rem;
     padding-left: 2.2rem;
     letter-spacing: 0.05em;
-    background-image:url("/src/assets/img/header/geo.svg");
+    background-image:url("../assets/img/header/geo.svg");
     background-size: 1.2rem 1.5rem;
     background-repeat: no-repeat;
     background-position: left;
@@ -118,7 +118,7 @@ body{
     line-height: 1.72;
     letter-spacing: 0.05em;
     padding-left: 4.6rem;
-    background-image:url("/src/assets/img/header/calc.svg");
+    background-image:url("../assets/img/header/calc.svg");
     background-size: 3.503rem 3.5rem;
     background-repeat: no-repeat;
     background-position: left;
@@ -194,7 +194,7 @@ body{
     line-height: 0.83;
     width: 19.0rem;
     margin-bottom: 0.6rem;
-    background-image:url("/src/assets/img/header/arrow.svg");
+    background-image:url("../assets/img/header/arrow.svg");
     background-size:0.9rem 0.5rem;
     background-repeat: no-repeat;
     background-position: right;
@@ -204,7 +204,7 @@ body{
     width: 11.9rem;
     line-height: 1.75;
     letter-spacing: 0.05em;
-    background-image:url("/src/assets/img/header/phone.svg");
+    background-image:url("../assets/img/header/phone.svg");
     background-size: 0.6rem 0.6rem;
     background-repeat: no-repeat;
     background-position: right;
@@ -436,7 +436,7 @@ body{
 }
 @media(max-width:768px){
     body{
-        background-image: url('/src/assets/img/main/bg.jpg');
+        background-image: url('../assets/img/main/bg.jpg');
         background-repeat: no-repeat;
         background-size:cover;
         background-position: center;
@@ -564,119 +564,7 @@ body{
           left: 0;
         } 
 
-        .header__mobile {
-            color: #2A2A2A;
-            display: flex;
-            flex-direction: column;
-        }
-        .header__mobile-adress {
-            width: 27.6rem;
-            height: 6.5rem;
-            padding-left: 8.3rem;
-            padding-top: 2rem;
-            background-image: url('/src/assets/img/header/card.svg');
-            background-repeat: no-repeat;
-            background-position: left;
-            background-size: 6.5rem;
-            margin-bottom: 3.7rem;
-        }
-        .mobile__adress-title {
-            font-weight: 400;
-            font-size: 1.4rem;
-            line-height: 1.35;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.8rem;
-        }
-        .mobile__adress-subtitle {
-            font-weight: 800;
-            font-size: 1.4rem;
-            line-height: 1.28;
-            position: relative;
-            &::after{
-                content: "";
-                width: 100%;
-                height: 0.2rem;
-                border-bottom: 0.2rem dotted #d91967;
-                transition: all 0.3s ease 0s;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-            }
-            &:hover{
-                &::after{
-                    width: 70%;
-                }
-                    
-                }
         
-        }
-        .header__mobile-calc {
-            margin-bottom: 4.2rem;
-            width: 23rem;
-            height: 6.6rem;
-            padding-left: 8.3rem;
-            padding-top: 1rem;
-            background-image: url('/src/assets/img/header/calc.svg');
-            background-repeat: no-repeat;
-            background-position: left;
-            background-size: 6.5rem;
-        }
-        .mobile__calc-title {
-            font-weight: 400;
-            font-size: 1.4rem;
-            line-height: 1.35;
-            letter-spacing: 0.05em;
-        }
-        .mobile__calc-subtitle {
-            font-weight: 800;
-            font-size: 1.4rem;
-            line-height: 1.28;
-            position: relative;
-            width: 6.8rem;
-            &::after{
-                content: "";
-                width: 100%;
-                height: 0.2rem;
-                border-bottom: 0.2rem dotted #d91967;
-                transition: all 0.3s ease 0s;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-            }
-            &:hover{
-                &::after{
-                    width: 70%;
-                }
-                    
-                }
-        }
-        .header__mobile-social {
-            display: flex;
-            flex-direction: column;
-            row-gap:1.3rem ;
-            width: 15.4rem;
-            margin-left: 8.3rem;
-        }
-        .mobile__social-title {
-            font-weight: 400;
-            font-size: 1.4rem;
-            line-height: 1.35;
-            letter-spacing: 0.05em;
-        }
-        .mobile__social-subtitle {
-            font-weight: 800;
-            font-size: 1.4rem;
-            line-height: 1.28;
-        }
-        .mobile__social-items {
-            display: flex;
-            column-gap: 0.636rem;
-        
-            img{
-                width: 3.182rem;
-                height: 3.182rem;
-            }
-        }
         
     
 }
@@ -717,6 +605,119 @@ body{
         width: 6.3rem;
  
     } 
+}
+.header__mobile {
+    color: #2A2A2A;
+    display: flex;
+    flex-direction: column;
+}
+.header__mobile-adress {
+    width: 27.6rem;
+    height: 6.5rem;
+    padding-left: 8.3rem;
+    padding-top: 2rem;
+    background-image: url('../assets/img/header/card.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 6.5rem;
+    margin-bottom: 3.7rem;
+}
+.mobile__adress-title {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.35;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+}
+.mobile__adress-subtitle {
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.28;
+    position: relative;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 0.2rem;
+        border-bottom: 0.2rem dotted #d91967;
+        transition: all 0.3s ease 0s;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &:hover{
+        &::after{
+            width: 70%;
+        }
+            
+        }
+
+}
+.header__mobile-calc {
+    margin-bottom: 4.2rem;
+    width: 23rem;
+    height: 6.6rem;
+    padding-left: 8.3rem;
+    padding-top: 1rem;
+    background-image: url('../assets/img/header/calc.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 6.5rem;
+}
+.mobile__calc-title {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.35;
+    letter-spacing: 0.05em;
+}
+.mobile__calc-subtitle {
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.28;
+    position: relative;
+    width: 6.8rem;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 0.2rem;
+        border-bottom: 0.2rem dotted #d91967;
+        transition: all 0.3s ease 0s;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &:hover{
+        &::after{
+            width: 70%;
+        }
+            
+        }
+}
+.header__mobile-social {
+    display: flex;
+    flex-direction: column;
+    row-gap:1.3rem ;
+    width: 15.4rem;
+    margin-left: 8.3rem;
+}
+.mobile__social-title {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.35;
+    letter-spacing: 0.05em;
+}
+.mobile__social-subtitle {
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.28;
+}
+.mobile__social-items {
+    display: flex;
+    column-gap: 0.636rem;
+
+    img{
+        width: 3.182rem;
+        height: 3.182rem;
+    }
 }
 
 
