@@ -294,6 +294,7 @@ body{
 }
 
 .header_fixed {
+    text-transform: none;
     transition: all 0.3 ease 0s;
     position: fixed;
     left: 1.5rem;
@@ -316,6 +317,7 @@ body{
       
       }
   }
+
 
 
   
@@ -561,6 +563,121 @@ body{
         ._actived{
           left: 0;
         } 
+
+        .header__mobile {
+            color: #2A2A2A;
+            display: flex;
+            flex-direction: column;
+        }
+        .header__mobile-adress {
+            width: 27.6rem;
+            height: 6.5rem;
+            padding-left: 8.3rem;
+            padding-top: 2rem;
+            background-image: url('/src/assets/img/header/card.svg');
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: 6.5rem;
+            margin-bottom: 3.7rem;
+        }
+        .mobile__adress-title {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.35;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.8rem;
+        }
+        .mobile__adress-subtitle {
+            font-weight: 800;
+            font-size: 1.4rem;
+            line-height: 1.28;
+            position: relative;
+            &::after{
+                content: "";
+                width: 100%;
+                height: 0.2rem;
+                border-bottom: 0.2rem dotted #d91967;
+                transition: all 0.3s ease 0s;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+            &:hover{
+                &::after{
+                    width: 70%;
+                }
+                    
+                }
+        
+        }
+        .header__mobile-calc {
+            margin-bottom: 4.2rem;
+            width: 23rem;
+            height: 6.6rem;
+            padding-left: 8.3rem;
+            padding-top: 1rem;
+            background-image: url('/src/assets/img/header/calc.svg');
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: 6.5rem;
+        }
+        .mobile__calc-title {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.35;
+            letter-spacing: 0.05em;
+        }
+        .mobile__calc-subtitle {
+            font-weight: 800;
+            font-size: 1.4rem;
+            line-height: 1.28;
+            position: relative;
+            width: 6.8rem;
+            &::after{
+                content: "";
+                width: 100%;
+                height: 0.2rem;
+                border-bottom: 0.2rem dotted #d91967;
+                transition: all 0.3s ease 0s;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+            &:hover{
+                &::after{
+                    width: 70%;
+                }
+                    
+                }
+        }
+        .header__mobile-social {
+            display: flex;
+            flex-direction: column;
+            row-gap:1.3rem ;
+            width: 15.4rem;
+            margin-left: 8.3rem;
+        }
+        .mobile__social-title {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.35;
+            letter-spacing: 0.05em;
+        }
+        .mobile__social-subtitle {
+            font-weight: 800;
+            font-size: 1.4rem;
+            line-height: 1.28;
+        }
+        .mobile__social-items {
+            display: flex;
+            column-gap: 0.636rem;
+        
+            img{
+                width: 3.182rem;
+                height: 3.182rem;
+            }
+        }
+        
     
 }
 
@@ -601,3 +718,5 @@ body{
  
     } 
 }
+
+

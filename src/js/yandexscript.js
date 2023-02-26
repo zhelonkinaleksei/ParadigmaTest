@@ -13,10 +13,10 @@ function init() {
 ymaps.ready(init);
 let headerCard = document.querySelector('.header__card');
 let cardBlock = document.querySelector('.card__block');
-function Animate(){
-    cardBlock.classList.add('card__block-active');}
-headerCard.addEventListener('mouseover', setTimeout(Animate,3000))
-headerCard.addEventListener('mouseout', function NoneAnimate(){
+headerCard.addEventListener('mouseover', function(){
+    cardBlock.classList.add('card__block-active');
+});
+headerCard.addEventListener('mouseout', function (){
     cardBlock.classList.remove('card__block-active');
  
 })
